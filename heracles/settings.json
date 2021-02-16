@@ -8,6 +8,7 @@
   "HeraclesContext": {
     "NumberOfCallsPerInvocation": 88,
     "NumberOfUserJourneys": 5,
-    "BaseUrl": "https://sirmione-web.azurewebsites.net/home/"
+
+    "BaseUrl": "https://hercchania-web.azurewebsites.net"
   }
 }

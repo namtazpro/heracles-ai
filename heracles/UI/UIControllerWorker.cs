@@ -97,10 +97,11 @@ namespace Heracles.UI
             driver.Navigate().GoToUrl($"{_heraclesContext.BaseUrl}/geryon");
             Thread.Sleep(3000);
             log.LogDebug($"Session {sessionNumber}: Go to geryon home page");
-            FindAndClick("geryon-go", log);
+            FindAndClick("geryongo", log);
+            var test = driver.Url;
             Think();
 
-            for (int i = 0; i < session.Steps.Length - 1; i++)
+            for (int i = 0; i < session.Steps.Length; i++)
             {
                 log.LogDebug($"Session {sessionNumber}: Enacting Step {i+1} of {session.Steps.Length}");
                 FindAndClick(session.Steps[i], log);

@@ -71,7 +71,7 @@ echo "$sampleGeneratorParameters" > GeneratorParameters.json
 az storage blob upload -c "zodiac-generator-config" -f GeneratorParameters.json -n GeneratorParameters.json >> $output_blob
 echo "<p>GeneratorParameters.json was written to $storageAccountName, container=zodiac-generator-config, blob=GeneratorParameters.json <b>!! You will need to edit GeneratorParameters.json</b>" >> $output_blob
 
-chaniaBaseUrl="https://$CHANIA_ALIAS-web.azurewebsites.net/home/"
+chaniaBaseUrl="https://$CHANIA_ALIAS-web.azurewebsites.net"
 settings="HeraclesContext__MinimumThinkTimeInMilliseconds=1000 HeraclesContext__UserSimulationEnabled=false HeraclesContext__UserTestingParametersStorageConnectionString=$connectionString HeraclesContext__BaseUrl=$chaniaBaseUrl" 
 
 echo "Updating App Settings for $functionAppName"
