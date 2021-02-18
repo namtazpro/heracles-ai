@@ -38,12 +38,12 @@ namespace Heracles
                 }
                 pages.Add(pageString);
             }
-
+            string baseUrl = $"{_heraclesContext.BaseUrl}/home/";
             int j = 0;
             foreach (var page in pages)
             {
                 j++;
-                await RestApi.Call(_heraclesContext.BaseUrl, page, log);
+                await RestApi.Call(baseUrl, page, log);
                 if (j % 25 == 0) log.LogDebug($"{j} calls have been made");
             }
             log.LogInformation($"Done. {j} calls were made in total.");
